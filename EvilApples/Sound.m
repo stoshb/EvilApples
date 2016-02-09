@@ -6,6 +6,37 @@
 //  Copyright © 2016 Stan Banes. All rights reserved.
 //
 
+//	To use this class with your code
+//	
+//		1.	Put all your sound files (.wav, .mp3) into your project where they become part of the bundle
+//		
+//		2.	In your code create a reference to Sound.h
+//		
+//				#import Sound.h
+//				:
+//				:
+//				Sounder = [[Sound alloc]init];
+//				
+//				This step will read all sound files into memory to allow them to be played by name
+//				
+//		3. Properties
+//		
+//			NSMutableArray	*arySounds
+//				
+//					Contains the name of all sound files	
+//					
+//		4.	Methods
+//		
+//			- (Sound *) init										Loads sounds into memory of easy, quick use
+//			- (void) PlaySoundNbr:(int)nbrSound;			Plays sound specified as an index into the arySounds array
+//			- (void) PlaySoundStr:(NSString*)SoundName;	Plays sound specified by name given as a string
+//				
+			
+			
+
+	
+
+
 #import "Sound.h"
 
 @implementation Sound
@@ -57,7 +88,6 @@ NSArray* myFiles;
 - (void) PlaySoundStr:(NSString *)namSound
 	{
 	// play sound
-	NSLog(@"Play %@", namSound);
 	[audio playEffect:namSound];
 	}
 @end
